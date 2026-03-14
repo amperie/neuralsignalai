@@ -1,6 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "NeuralSignal AI"
+disableKinds = ["taxonomy", "term"]
 
 [params]
 description = "NeuralSignal AI builds practical systems for signal extraction, automation, and intelligent workflows."

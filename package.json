@@ -1,0 +1,27 @@
+{
+  "name": "neuralsignal_ai_website",
+  "version": "1.0.0",
+  "description": "Hugo site scaffold for deployment on Cloudflare Pages from a GitHub repository.",
+  "scripts": {
+    "dev": "hugo server",
+    "build": "hugo",
+    "cf:login": "wrangler login",
+    "cf:pages:create": "wrangler pages project create neuralsignalai",
+    "cf:deploy": "wrangler pages deploy public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amperie/neuralsignalai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amperie/neuralsignalai/issues"
+  },
+  "homepage": "https://github.com/amperie/neuralsignalai#readme",
+  "devDependencies": {
+    "hugo-bin": "^0.149.2",
+    "wrangler": "^4.73.0"
+  }
+}

@@ -7,7 +7,23 @@ Hugo site scaffold for deployment on Cloudflare Pages from a GitHub repository.
 Install Hugo extended, then run:
 
 ```powershell
-hugo server
+npm run dev
+```
+
+## Tooling
+
+This repo installs local CLI dependencies through npm:
+
+- `hugo-bin`
+- `wrangler`
+
+Useful commands:
+
+```powershell
+npm run build
+npm run cf:login
+npm run cf:pages:create
+npm run cf:deploy
 ```
 
 ## Cloudflare Pages settings
