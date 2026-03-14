@@ -4,51 +4,191 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ .Site.Title }}</title>
-    <meta
-      name="description"
-      content="{{ .Site.Params.description }}"
-    />
+    <meta name="description" content="{{ .Site.Params.description }}" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
+    <div class="background-orb background-orb-one"></div>
+    <div class="background-orb background-orb-two"></div>
+
     <div class="page-shell">
-      <header class="hero">
-        <p class="eyebrow">{{ .Site.Title }}</p>
-        <h1>Practical AI systems that turn noisy inputs into useful decisions.</h1>
-        <p class="lede">
-          A Hugo starter site, ready to connect to GitHub and deploy on Cloudflare
-          Pages.
-        </p>
-        <p class="lede">Deployment test marker: GitHub auto-deploy pipeline is active.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="mailto:hello@example.com">Contact</a>
-          <a class="button button-secondary" href="#about">About</a>
-        </div>
+      <header class="site-header">
+        <a class="brand" href="/">{{ .Site.Title }}</a>
+        <nav class="site-nav">
+          <a href="#capabilities">Capabilities</a>
+          <a href="#system">System</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </header>
 
       <main>
-        <section class="card-grid" id="about">
-          <article class="card">
-            <h2>Signals</h2>
+        <section class="hero" id="top">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Signal Systems For Real Operations</p>
+            <h1>AI products that convert messy inputs into clear actions.</h1>
+            <p class="lede">
+              NeuralSignal AI designs decision systems, operator tooling, and workflow
+              automation for teams that need leverage, not hype.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="mailto:hello@example.com"
+                >Start a Project</a
+              >
+              <a class="button button-secondary" href="#capabilities">See Capabilities</a>
+            </div>
+            <ul class="hero-metrics">
+              <li>
+                <strong>Signal extraction</strong>
+                <span>From noisy market, product, and operations data.</span>
+              </li>
+              <li>
+                <strong>Automation design</strong>
+                <span>Focused systems that remove manual bottlenecks.</span>
+              </li>
+              <li>
+                <strong>Deployment ready</strong>
+                <span>Shipped as practical software, not research theater.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="signal-panel">
+              <div class="signal-header">
+                <span class="signal-dot"></span>
+                <span class="signal-dot"></span>
+                <span class="signal-dot"></span>
+              </div>
+              <svg viewBox="0 0 520 420" class="signal-graphic" aria-hidden="true">
+                <defs>
+                  <linearGradient id="signalLine" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#82e8ff" />
+                    <stop offset="50%" stop-color="#51b3ff" />
+                    <stop offset="100%" stop-color="#66ffd1" />
+                  </linearGradient>
+                  <linearGradient id="signalGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="rgba(130,232,255,0)" />
+                    <stop offset="50%" stop-color="rgba(130,232,255,0.8)" />
+                    <stop offset="100%" stop-color="rgba(102,255,209,0)" />
+                  </linearGradient>
+                </defs>
+                <rect x="40" y="50" width="440" height="290" rx="22" class="grid-frame" />
+                <g class="grid-lines">
+                  <path d="M40 122H480" />
+                  <path d="M40 194H480" />
+                  <path d="M40 266H480" />
+                  <path d="M113 50V340" />
+                  <path d="M186 50V340" />
+                  <path d="M259 50V340" />
+                  <path d="M332 50V340" />
+                  <path d="M405 50V340" />
+                </g>
+                <path
+                  d="M70 275 C110 260, 118 145, 170 132 S255 265, 300 228 S374 120, 425 148 458 220, 450 204"
+                  class="signal-path"
+                />
+                <path
+                  d="M67 276 C110 260, 118 145, 170 132 S255 265, 300 228 S374 120, 425 148 458 220, 450 204"
+                  class="signal-path signal-path-glow"
+                />
+                <g class="signal-nodes">
+                  <circle cx="170" cy="132" r="8" />
+                  <circle cx="300" cy="228" r="8" />
+                  <circle cx="425" cy="148" r="8" />
+                </g>
+                <g class="signal-callouts">
+                  <rect x="88" y="82" width="126" height="42" rx="12" />
+                  <text x="105" y="108">Anomaly detected</text>
+                  <rect x="286" y="296" width="150" height="42" rx="12" />
+                  <text x="304" y="322">Action recommended</text>
+                </g>
+              </svg>
+              <div class="signal-caption">
+                <p>Pattern engine</p>
+                <strong>Modeling signals, uncertainty, and action timing.</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="proof-band reveal">
+          <p>Built for founders, operators, and technical teams who need usable leverage.</p>
+          <div class="proof-grid">
+            <span>Decision Support</span>
+            <span>Workflow Automation</span>
+            <span>Model-Assisted Analysis</span>
+            <span>Operational Intelligence</span>
+          </div>
+        </section>
+
+        <section class="section-heading reveal" id="capabilities">
+          <p class="eyebrow">Capabilities</p>
+          <h2>From raw inputs to working systems.</h2>
+          <p>
+            The work is centered on building compact, defensible AI products that fit
+            the operating reality of a team.
+          </p>
+        </section>
+
+        <section class="capability-grid">
+          <article class="feature-card reveal">
+            <span class="feature-index">01</span>
+            <h3>Signal Discovery</h3>
             <p>
-              Pull structure from market data, operations data, or product events
-              without burying the team in tooling overhead.
+              Identify patterns, thresholds, and state changes inside fragmented data
+              streams.
             </p>
           </article>
-          <article class="card">
-            <h2>Automation</h2>
+          <article class="feature-card reveal">
+            <span class="feature-index">02</span>
+            <h3>Operator Interfaces</h3>
             <p>
-              Ship focused workflows that reduce manual analysis and make decisions
-              reproducible.
+              Create interfaces that explain model output and support confident human
+              decisions.
             </p>
           </article>
-          <article class="card">
-            <h2>Deployment</h2>
+          <article class="feature-card reveal">
+            <span class="feature-index">03</span>
+            <h3>Execution Automation</h3>
             <p>
-              Start simple with a static site and expand later into APIs, workers, or
-              full applications.
+              Turn repeatable analysis into workflow steps, alerts, and production
+              actions.
             </p>
           </article>
+        </section>
+
+        <section class="system-section" id="system">
+          <div class="system-copy reveal">
+            <p class="eyebrow">System Design</p>
+            <h2>Structured like an operating system for decisions.</h2>
+            <p>
+              A good AI workflow needs more than a model. It needs observation, state,
+              ranking, explanation, and controlled action. The stack should expose how a
+              decision was formed and what happens next.
+            </p>
+          </div>
+          <div class="system-steps reveal">
+            <article class="system-step">
+              <span>Sense</span>
+              <p>Collect events, metrics, documents, and behavior signals.</p>
+            </article>
+            <article class="system-step">
+              <span>Interpret</span>
+              <p>Score relevance, detect structure, and estimate uncertainty.</p>
+            </article>
+            <article class="system-step">
+              <span>Act</span>
+              <p>Trigger recommendations, workflows, or downstream execution safely.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="cta-panel reveal" id="contact">
+          <div>
+            <p class="eyebrow">Get In Touch</p>
+            <h2>Need a sharp first version instead of a long innovation roadmap?</h2>
+          </div>
+          <a class="button button-primary" href="mailto:hello@example.com">Contact NeuralSignal AI</a>
         </section>
       </main>
     </div>
@@ -56,4 +196,3 @@
     <script src="/app.js"></script>
   </body>
 </html>
-
