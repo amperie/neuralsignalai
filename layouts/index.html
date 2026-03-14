@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NeuralSignal AI</title>
+    <title>{{ .Site.Title }}</title>
     <meta
       name="description"
-      content="NeuralSignal AI builds practical systems for signal extraction, automation, and intelligent workflows."
+      content="{{ .Site.Params.description }}"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <div class="page-shell">
       <header class="hero">
-        <p class="eyebrow">NeuralSignal AI</p>
+        <p class="eyebrow">{{ .Site.Title }}</p>
         <h1>Practical AI systems that turn noisy inputs into useful decisions.</h1>
         <p class="lede">
-          A clean starter site, ready to connect to GitHub and deploy on Cloudflare
+          A Hugo starter site, ready to connect to GitHub and deploy on Cloudflare
           Pages.
         </p>
         <div class="hero-actions">
@@ -52,7 +52,6 @@
       </main>
     </div>
 
-    <script src="./app.js"></script>
+    <script src="/app.js"></script>
   </body>
 </html>
-
