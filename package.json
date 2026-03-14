@@ -7,7 +7,9 @@
     "build": "hugo",
     "cf:login": "wrangler login",
     "cf:pages:create": "wrangler pages project create neuralsignalai",
-    "cf:deploy": "wrangler pages deploy public"
+    "cf:deploy": "wrangler pages deploy public",
+    "deploy": "npx hugo && wrangler deploy",
+    "preview": "npx hugo && wrangler dev"
   },
   "repository": {
     "type": "git",
